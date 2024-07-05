@@ -16,7 +16,7 @@ namespace CANBUS {
     }
 
     public string ReadNext() {
-      if (binaryReader.BaseStream.Position >= binaryReader.BaseStream.Length) {
+      if (binaryReader.BaseStream== null || binaryReader.BaseStream.Position >= binaryReader.BaseStream.Length) {
         binaryReader.Close();
         return null;
       }

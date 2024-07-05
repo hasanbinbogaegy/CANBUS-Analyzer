@@ -131,7 +131,7 @@ namespace TeslaSCAN
     public void SetValue(object val)
     {
       previous = value;
-      changed = value != val;
+      changed = !value.Equals(val);
       value = val;
 
       if (changed) {
